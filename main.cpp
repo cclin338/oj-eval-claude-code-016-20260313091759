@@ -248,9 +248,9 @@ private:
                 return current;
             }
 
+            // Find the correct child to follow
             int i = 0;
-            while (i < node.size && key.str[0] ? (key < node.pairs[i].key ? false : true) : false) {
-                if (!(node.pairs[i].key < key)) break;
+            while (i < node.size && !(key < node.pairs[i].key)) {
                 i++;
             }
 
